@@ -1,1 +1,84 @@
-<p>edit-professor works!</p>
+<!-- Title group  -->
+<div class="title-group">
+    <h1 class="mat-h1">Add Prof</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+  <!-- Form -->
+  <div class="inner-wrapper">
+    <form
+      [formGroup]="profForm"
+      (ngSubmit)="updateProfForm()"
+      #resetStudentForm="ngForm"
+      novalidate
+    >
+      <!-- Left block -->
+      <mat-card>
+        <div class="controlers-wrapper">
+          <!-- UserName -->
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="professor username"
+              formControlName="professor_username"
+            />
+            <mat-error *ngIf="handleError('professor_username', 'required')">
+                You must provide a<strong>professor username</strong>
+              </mat-error>
+            </mat-form-field>
+            <!-- First Name -->
+            <mat-form-field class="example-full-width">
+                <input
+                  matInput
+                  placeholder="professor First name"
+                  formControlName="professor_firstname"
+                />
+            <mat-error *ngIf="handleError('professor_firstname', 'required')">
+                You must provide a<strong>professor First name</strong>
+              </mat-error>
+            </mat-form-field>
+            <!-- Last Name -->
+            <mat-form-field class="example-full-width">
+            <input
+                matInput
+                placeholder="professor Last name"
+                formControlName="professor_lastname"
+            />
+            <mat-error *ngIf="handleError('professor_lastname', 'required')">
+              You must provide a<strong>professor Last name</strong>
+            </mat-error>
+          </mat-form-field>
+          <!-- Email -->
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Professor email"
+              formControlName="professor_email"
+            />
+            <mat-error *ngIf="handleError('professor_email', 'required')">
+              You must provide a<strong>professor email</strong>
+            </mat-error>
+          </mat-form-field>
+          <!-- age -->
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="age"
+              formControlName="age"
+            />
+            <mat-error *ngIf="handleError('age', 'required')">
+              You must provide a<strong>your age</strong>
+            </mat-error>
+          </mat-form-field>
+          
+        
+
+      <!-- Submit & Reset -->
+      <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Update</button>
+          </div>
+        </div>
+      </mat-card>
+
+  </div>
