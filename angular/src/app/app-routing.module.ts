@@ -7,7 +7,7 @@ import { ViewProfessorComponent } from './components/view-professor/view-profess
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'addProfessor' },
   { path: 'addProfessor', component: AddProfessorComponent },
-  { path: 'Professor/:id', component: EditProfessorComponent },
+  { path: 'updateProfessor/:id', component: EditProfessorComponent },
   { path: 'viewProfs', component: ViewProfessorComponent }
 ];
 @NgModule({
